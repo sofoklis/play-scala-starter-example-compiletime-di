@@ -22,7 +22,7 @@ class MyComponents(context: Context)
   lazy val countController = new mycontrollers.CountController(controllerComponents, counter)
   lazy val asyncController = new mycontrollers.AsyncController(controllerComponents, actorSystem)
 
-  homeController.index
+
 
   lazy val router = new Routes(httpErrorHandler, homeController, countController, asyncController, assets, prefix)
 
